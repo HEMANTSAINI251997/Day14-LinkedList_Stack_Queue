@@ -95,6 +95,17 @@ namespace Day14_LinkedlistStackQueue
 
             }
         }
+        public void FirstNode()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("Linked List Empty");
+            }
+            head = head.next;
+            Console.WriteLine("DELETED FIRST NODE SUCCESSFULLY");
+
+
+        }
 
     }
 }
