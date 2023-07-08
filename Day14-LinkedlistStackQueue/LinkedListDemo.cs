@@ -100,11 +100,33 @@ namespace Day14_LinkedlistStackQueue
             if(head == null)
             {
                 Console.WriteLine("Linked List Empty");
+                return;
             }
             head = head.next;
             Console.WriteLine("DELETED FIRST NODE SUCCESSFULLY");
 
-
+        }
+        public void LastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List Empty");
+                return;
+            }
+            if (head.next == null)
+            {
+                Console.WriteLine("The next element of head is null");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp= temp.next;
+                }
+                temp.next = null;
+                Console.WriteLine("Removed Last Element");
+            }
         }
 
     }
