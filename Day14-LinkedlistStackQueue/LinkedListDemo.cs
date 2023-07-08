@@ -46,14 +46,30 @@ namespace Day14_LinkedlistStackQueue
                 Console.WriteLine("Linked List is Empty");
                 return;
             }
-
-            while (temp != null)
-            {
-                Console.WriteLine("ELEMENT = " + temp.data);
-                temp = temp.next;
+            else
+            { 
+                while (temp != null)
+                {
+                    Console.WriteLine("ELEMENT = " + temp.data);
+                    temp = temp.next;
+                }
             }
-
-
+        }
+        public void Reverse(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                head = node;
+                head.next = temp;
+            }
+            Console.WriteLine("ELEMENTS = "+node.data);
+            
         }
     }
 }
