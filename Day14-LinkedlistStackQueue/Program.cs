@@ -11,7 +11,12 @@ namespace Day14_LinkedlistStackQueue
         static void Main(string[] args)
         {
             LinkedListDemo linkedListDemo = new LinkedListDemo();
-            linkedListDemo.CheckLinkedList();
+          //  linkedListDemo.CheckLinkedList();
+
+            linkedListDemo.Add(70);
+            linkedListDemo.Add(30);
+            linkedListDemo.Add(56);
+            linkedListDemo.Display();
         }
     }
 }
