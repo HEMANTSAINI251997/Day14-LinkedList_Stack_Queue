@@ -20,6 +20,7 @@ namespace Day14_LinkedlistStackQueue
                 Console.WriteLine("4. UC4-Insert 30 between 56 & 70");
                 Console.WriteLine("5. UC-5 Delet First element 56");
                 Console.WriteLine("6. UC-6 Delet Last element");
+                Console.WriteLine("7. UC-7 Search value of 30");
                 Console.WriteLine("Enter your Option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -54,6 +55,10 @@ namespace Day14_LinkedlistStackQueue
                     case 6:
                         linkedListDemo.LastNode();
                         linkedListDemo.Display();
+                        break;
+                    case 7:
+                        int val=linkedListDemo.Search(30);
+                        Console.WriteLine("POSITION =" + val);
                         break;
 
                     default:

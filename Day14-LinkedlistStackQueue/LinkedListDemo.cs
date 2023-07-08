@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -127,6 +128,30 @@ namespace Day14_LinkedlistStackQueue
                 temp.next = null;
                 Console.WriteLine("Removed Last Element");
             }
+           
+        }
+        public int Search(int value)
+        {
+            Node temp = head;
+            if (temp == null)
+            {
+                return -1;
+            }
+            int count = 1;
+            while (temp != null)
+            {
+                if(temp.data == value)
+                {
+                    return count;
+                }
+                temp = temp.next;
+                count++;
+
+            }
+            return count;
+            
+
+
         }
 
     }
