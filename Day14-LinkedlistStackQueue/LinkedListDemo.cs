@@ -150,9 +150,29 @@ namespace Day14_LinkedlistStackQueue
             }
             return count;
             
-
+        }
+        public void InsertDataTwo(int data , int previous)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == previous)
+                    {
+                        node.next = temp.next;
+                        temp.next = node;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
 
         }
-
     }
 }
