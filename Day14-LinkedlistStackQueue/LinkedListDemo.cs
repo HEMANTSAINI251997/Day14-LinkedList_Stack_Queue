@@ -69,7 +69,32 @@ namespace Day14_LinkedlistStackQueue
                 head.next = temp;
             }
             Console.WriteLine("ELEMENTS = "+node.data);
-            
+           
         }
+        public void InsertData(int data, int prevdata)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == prevdata)
+                    {
+                        node.next = temp.next;
+                        temp.next = node;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+
+
+            }
+        }
+
     }
 }

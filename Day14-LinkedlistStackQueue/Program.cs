@@ -17,6 +17,7 @@ namespace Day14_LinkedlistStackQueue
                 Console.WriteLine("1. UC1-Simple Linked List");
                 Console.WriteLine("2. UC2-Add values in Linked List");
                 Console.WriteLine("3. UC3-Reverse Linked List");
+                Console.WriteLine("4. UC4-Insert 30 between 56 & 70");
                 Console.WriteLine("Enter your Option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -36,6 +37,12 @@ namespace Day14_LinkedlistStackQueue
                         linkedListDemo.Reverse(30);
                         linkedListDemo.Reverse(70);
                         Console.WriteLine("After Reverse");
+                        linkedListDemo.Display();
+                        break;
+                    case 4:
+                        linkedListDemo.Add(70);
+                        linkedListDemo.Add(56);
+                        linkedListDemo.InsertData(30,70);
                         linkedListDemo.Display();
                         break;
                     default:
